@@ -1,0 +1,14 @@
+<table *ngIf="table.length>0">
+    <tr>
+        <th>id</th>
+        <th>firstName</th>
+        <th>lastName</th>
+        <th>email</th>
+    </tr>
+    <tr *ngFor="let row of table; let i = index" (click)="onSelectedCustomer(i)" style="cursor: pointer;">
+        <td>{{row.id}}</td>
+        <td>{{row.firstName}}</td>
+        <td>{{row.lastName}}</td>
+        <td>{{row.email}}</td>
+    </tr>
+</table>

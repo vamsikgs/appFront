@@ -1,0 +1,10 @@
+<form [formGroup]="editForm">
+    <section>
+        <input required placeholder=" Id" formControlName="id">
+        <input placeholder="First Name" formControlName="firstName">
+        <input placeholder="Last Name" formControlName="lastName">
+        <input placeholder="Email" formControlName="email">
+    </section>
+</form>
+<button class="btn btn-success" style="margin-left: 20px;" (click)="onSubmit()">{{editing ? "update" : "add" }}</button>
+<button class="btn btn-danger" (click)="onDelete()" style="margin-left: 20px;">delete</button>
