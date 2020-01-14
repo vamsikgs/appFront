@@ -9,16 +9,22 @@ export class AppHttpService {
   constructor(private http: HttpClient) {}
 
   list() {
-    return this.http.get<ResponseModel>("http://localhost:8080/app/list");
+    return this.http.get<ResponseModel>(
+      "http://ec2-54-70-232-75.us-west-2.compute.amazonaws.com:8080/app/list"
+    );
   }
 
   update(data) {
-    return this.http.post<ResponseModel>("http://localhost:8080/app/add", data);
+    return this.http.post<ResponseModel>(
+      "http://ec2-54-70-232-75.us-west-2.compute.amazonaws.com:8080/app/add",
+      data
+    );
   }
 
   delete(data) {
     return this.http.get<ResponseModel>(
-      "http://localhost:8080/app/deleteById/" + data
+      "http://ec2-54-70-232-75.us-west-2.compute.amazonaws.com:8080/app/deleteById/" +
+        data
     );
   }
 }
